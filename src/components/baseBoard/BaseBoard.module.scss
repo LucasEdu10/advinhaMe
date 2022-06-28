@@ -1,0 +1,15 @@
+.base {
+  background-color: rgba(0, 0, 0, 0.3);
+  // background-size: 100vh;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.base a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
