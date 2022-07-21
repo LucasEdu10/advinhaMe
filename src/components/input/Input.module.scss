@@ -1,5 +1,6 @@
 .show{
   display: block;
+  font-size: 20px;
 }
 
 .notShow{
@@ -19,4 +20,46 @@
   margin: 10px 0;
   padding: 10px 15px;
   width: 100%;
+}
+
+.rowWrapper {
+  background-color: #f4ede2;
+  background-color: var(--bg-darker-color);
+  border-radius: 5px;
+  position: relative;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  font-weight: inherit;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 5px 10px;
+  position: relative;
+  width: 100%;
+}
+
+
+.rowCurrent {
+  border: 3px solid;
+  border-width: 2px;
+  border-radius: 9px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.rowCurrent span{
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.massage{
+  align-items: center;
+  min-height: 30px;
+  padding: 10px;
 }

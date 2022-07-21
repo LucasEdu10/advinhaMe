@@ -26,10 +26,66 @@
 
 .btnInfo {
   align-items: center;
-  background-color: transparent;
+  background-color: #1e2732;
+  color: #423232;
   border: 0;
   float: right;
   cursor: pointer;
   display: flex; 
   margin-top: -25px;
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px #0000009F inset;
+  }
+}
+
+.wapperInfo {
+    padding: 8px;
+    float: right;
+    margin-right: 129px;
+}
+
+.show{
+  display: block;
+}
+
+.notShow{
+  display: none;
+}
+
+.cardInfo{
+  position: absolute;
+  max-width: calc(100vw - 40px);
+  z-index: 1001;
+  border-radius: 10px;
+  background-color: #273340;
+  box-shadow: rgba(25, 50, 71, 0.16) 0px 4px 20px, rgba(0, 0, 0, 0.06) 0px 2px 3px;
+  padding: 10px;
+  animation: 150ms ease-out 0s 1 normal forwards running kgxNDo;
+}
+
+.content{
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 5px;
+  color: #423232;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  padding: 10px 15px;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+}
+
+// .image{
+//   height: 16px;
+//   width: 16px;
+// }
+
+.name{
+  padding-left: 5px;
 }
