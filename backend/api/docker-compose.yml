@@ -7,9 +7,12 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-  web:
+    ports:
+    - 5432:5432/tcp
+  advinheme:
     build: .
     command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: AdvinheMe
     volumes:
     - .:/app
     ports:
