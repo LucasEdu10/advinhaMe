@@ -5,12 +5,17 @@ from palavras.models import Palavra, PalavraDia
 class PalavraDiaSerializer(serializers.ModelSerializer):
     class Meta:
         model = PalavraDia
-        fields = ['id', 'id_palavra_dia', 'palavra']
+        fields = ['id_palavra_dia', 'palavra']
 
 class PalavraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Palavra
         fields = '__all__'
+
+class PalavrasRelacionadasAPalavraDiaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Palavra
+        fields = ['dia_da_palavra_id', 'palavra', 'posicao']
 
 # class MatriculaSerializer(serializers.ModelSerializer):
 #     class Meta:
