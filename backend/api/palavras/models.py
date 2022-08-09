@@ -9,14 +9,14 @@ def verificarPalavra():
     return posicao_palavra
 
 class PalavraDia(models.Model):
-    id_palavra_dia = models.IntegerField(verbose_name="Dia da Palavra")
+    id_palavra_dia = models.IntegerField(verbose_name="Dia da Palavra", primary_key=True)
     palavra = models.CharField(verbose_name="Palavra do dia", max_length=40, blank=True, null=False)
 
     def __str__(self):
         return self.palavra
 
 class Palavra(models.Model):
-    palavra_do_dia = models.ForeignKey(PalavraDia, verbose_name="Dia da Palavra", on_delete=models.CASCADE, related_name="palavra_dia")
+    dia_da_palavra = models.ForeignKey(PalavraDia, default=1, verbose_name="Dia da Palavra", on_delete=models.CASCADE, related_name="dia_da_palavra")
     posicao = models.IntegerField(verbose_name="Posição", null=True, default=verificarPalavra, editable=False)
     palavra = models.CharField(verbose_name="Palavra" ,max_length=40, blank=True, null=False)
 

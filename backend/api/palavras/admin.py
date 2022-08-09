@@ -8,9 +8,9 @@ class PalavraDiaAdmin(admin.ModelAdmin):
     list_per_page = 50
 
 class PalavraAdmin(admin.ModelAdmin):
-    list_display = ('palavra_do_dia', 'palavra', 'posicao')
+    list_display = ('dia_da_palavra', 'palavra', 'posicao')
     list_display_links = ('palavra', 'posicao')
-    search_fields = ('palavra_do_dia', 'palavra', )
+    search_fields = ('dia_da_palavra', 'palavra', )
     list_per_page = 50
 
 admin.site.register(PalavraDia, PalavraDiaAdmin)
